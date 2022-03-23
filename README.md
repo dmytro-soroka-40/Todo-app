@@ -1,1 +1,4 @@
-# Todo-app
+# todos
+
+Todos by React.
+Creator: Dmytro Soroka

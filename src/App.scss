@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Tahoma', sans-serif;
+
+  background: #69a5ac;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.todo {
+  position: relative;
+
+  width: 780px;
+  height: auto;
+  margin: 60px auto;
+  padding: 30px 0;
+
+  background: #0c575b;
+  box-shadow: 0px 9px 20px 4px rgba(12, 78, 82, 0.49);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 25px;
+
+    background: #c5dfe6;
+  }
+
+  &__wrapper {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 16px 0 30px;
+  }
+
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 42px;
+    padding: 10px 50px 10px 35px;
+
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #0c575b;
+    background: #c5dfe6;
+    border: none;
+
+    outline: none;
+
+    transition: background 0.3s ease;
+
+    &:hover,
+    &:active {
+      background: rgba(197, 223, 230, 0.8);
+
+      transition: background 0.3s ease;
+    }
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 23px;
+
+      color: #0c575b;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 11px;
+    right: 10px;
+
+    width: 20px;
+    height: 20px;
+
+    background: url(../public/add-icon.svg) no-repeat center center / cover;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 82px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 0 11px 15px 0;
+
+    border-bottom: 2px solid #c5dfe6;
+
+    &:hover > .todo__delete {
+      visibility: visible;
+      opacity: 1;
+
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    span {
+      display: flex;
+      width: 100%;
+
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        display: block;
+        min-width: 20px;
+        height: 20px;
+        margin-right: 18px;
+
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &:checked + span::before {
+      background: url(../public/tic-icon.svg) no-repeat center center / cover;
+      border: 3px solid transparent;
+    }
+  }
+
+  &__input-change {
+    width: 100%;
+
+    font-size: 23px;
+    line-height: 23px;
+    text-transform: lowercase;
+
+    border: none;
+    background: none;
+    color: #ffffff;
+
+    outline: none;
+
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+
+  &__delete {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-left: 15px;
+
+    background: url(../public/remove-icon.svg) no-repeat center center / cover;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__delete-btn {
+    padding-bottom: 2px;
+
+    font-size: 16px;
+    line-height: 19px;
+
+    border-bottom: 2px solid rgba(197, 223, 230, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+
+    &_all {
+      margin-right: 14px;
+    }
+
+    &:hover {
+      color: #ffffff;
+      border-bottom: 2px solid #c5dfe6;
+
+      transition: border-bottom 0.3s ease, color 0.3s ease;
+    }
+  }
+}
