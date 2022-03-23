@@ -1,4 +1,4 @@
 # todos
 
 Todos by React.
-Creator: Dmytro Soroka
+Created by: Dmytro Soroka
