@@ -1,4 +1,3 @@
 # todos
 
-Todos by React.
-Created by: Dmytro Soroka
+https://dmytro-soroka-todo-app.netlify.app/
