@@ -12,7 +12,7 @@ HTML, CSS, BEM, Flexbox, SCSS, JS, REACT, NPM
 
 
 
-## Link
+## Demo
 
 Link: https://dmytro-soroka-todo-app.netlify.app/
 
