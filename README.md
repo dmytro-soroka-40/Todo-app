@@ -5,19 +5,18 @@
 ToDo App is an application used to plan your own tasks. <br/>
 The application has the ability to add, edit, save and delete tasks.
 
----
+
 ## Technologies
 
 HTML, CSS, BEM, Flexbox, SCSS, JS, REACT, NPM
 
---- 
+
 
 ## Link
 
 Link: https://dmytro-soroka-todo-app.netlify.app/
 
 
----
 
 ## Social-media
 
